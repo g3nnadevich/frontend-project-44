@@ -11,5 +11,8 @@
     "brain-games": "bin/brain-games.js"
   },
   "author": "Nikita Gusakov",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
