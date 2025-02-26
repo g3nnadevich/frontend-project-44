@@ -24,7 +24,7 @@ const questionAndAnswer = () => {
   const index = getRandomNumber(0, length - 1);
   const correctAnswer = String(arithmeticProgression[index]);
   arithmeticProgression[index] = '..';
-  const question = String(arithmeticProgression);
+  const question = arithmeticProgression.join(' ');
 
   return [question, correctAnswer];
 };
