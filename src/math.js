@@ -7,4 +7,16 @@ const isEven = (number) => {
   return number % 2 === 0;
 };
 
-export {getRandomNumber, isEven};
+const isPrime = (number) => {
+  if (number === 1) {
+    return false;
+  }
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+export {getRandomNumber, isEven, isPrime};
