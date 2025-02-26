@@ -1,12 +1,12 @@
-import game from "../index.js";
-import {getRandomNumber} from "../math.js";
+import game from '../index.js';
+import { getRandomNumber } from '../math.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
 const NOD = (firstNumber, secondNumber) => {
   if (secondNumber > firstNumber) return NOD(secondNumber, firstNumber);
-	if (!secondNumber) return firstNumber;
-	return NOD(secondNumber, firstNumber % secondNumber);
+  if (!secondNumber) return firstNumber;
+  return NOD(secondNumber, firstNumber % secondNumber);
 };
 
 const questionAndAnswer = () => {

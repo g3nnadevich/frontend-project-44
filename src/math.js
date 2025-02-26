@@ -3,9 +3,7 @@ const getRandomNumber = (min, max) => {
   return randomNumber;
 };
 
-const isEven = (number) => {
-  return number % 2 === 0;
-};
+const isEven = (number) => number % 2 === 0;
 
 const isPrime = (number) => {
   if (number === 1) {
@@ -19,4 +17,4 @@ const isPrime = (number) => {
   return true;
 };
 
-export {getRandomNumber, isEven, isPrime};
+export { getRandomNumber, isEven, isPrime };

@@ -1,15 +1,15 @@
-import {getRandomNumber} from "../math.js";
-import game from "../index.js";
+import { getRandomNumber } from '../math.js';
+import game from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
 const progression = (firstNumber, step, length) => {
   const progression = [];
-  for (let i = 0; i < length; i+=1) {
+  for (let i = 0; i < length; i += 1) {
     if (progression.length === 0) {
       progression.push(firstNumber);
     } else {
-      const newNumber = progression[i-1] + step;
+      const newNumber = progression[i - 1] + step;
       progression.push(newNumber);
     }
   }
@@ -25,9 +25,8 @@ const questionAndAnswer = () => {
   const correctAnswer = String(arithmeticProgression[index]);
   arithmeticProgression[index] = '..';
   const question = arithmeticProgression;
-  
+
   return [question, correctAnswer];
-  
 };
 
 const fullGame = () => {

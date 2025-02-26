@@ -1,5 +1,5 @@
-import {getRandomNumber, isPrime} from "../math.js";
-import game from "../index.js";
+import { getRandomNumber, isPrime } from '../math.js';
+import game from '../index.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
