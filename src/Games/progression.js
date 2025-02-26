@@ -19,7 +19,7 @@ const progression = (firstNumber, step, length) => {
 const questionAndAnswer = () => {
   const firstNumber = getRandomNumber(1, 100);
   const step = getRandomNumber(1, 10);
-  const length = getRandomNumber(5, 15);
+  const length = 10;
   const arithmeticProgression = progression(firstNumber, step, length);
   const index = getRandomNumber(0, length - 1);
   const correctAnswer = String(arithmeticProgression[index]);
