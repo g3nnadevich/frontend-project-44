@@ -11,6 +11,9 @@ const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({baseDirectory: __dirname, recommendedConfig: pluginJs.configs.recommended});
 
 export default [
+  {
+    ignores: ["eslint.config.js"]
+  },
   {languageOptions: { globals: {...globals.browser, ...globals.node} }},
   ...compat.extends("airbnb"),
 ];
