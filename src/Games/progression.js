@@ -3,7 +3,7 @@ import game from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
-const progression = (firstNumber, step, length) => {
+const arithmeticProgression = (firstNumber, step, length) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
     if (progression.length === 0) {
@@ -20,11 +20,11 @@ const questionAndAnswer = () => {
   const firstNumber = getRandomNumber(1, 100);
   const step = getRandomNumber(1, 10);
   const length = 10;
-  const arithmeticProgression = progression(firstNumber, step, length);
+  const progression = arithmeticProgression(firstNumber, step, length);
   const index = getRandomNumber(0, length - 1);
-  const correctAnswer = String(arithmeticProgression[index]);
-  arithmeticProgression[index] = '..';
-  const question = arithmeticProgression.join(' ');
+  const correctAnswer = String(progression[index]);
+  progression[index] = '..';
+  const question = progression.join(' ');
 
   return [question, correctAnswer];
 };
