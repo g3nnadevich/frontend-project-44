@@ -9,7 +9,7 @@ const NOD = (firstNumber, secondNumber) => {
   return NOD(secondNumber, firstNumber % secondNumber);
 };
 
-const questionAndAnswer = () => {
+const getQuestionAndAnswer = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
   const question = `${firstNumber} ${secondNumber}`;
@@ -17,8 +17,6 @@ const questionAndAnswer = () => {
   return [question, correctAnswer];
 };
 
-const fullGame = () => {
-  game(rules, questionAndAnswer);
+export default () => {
+  game(rules, getQuestionAndAnswer);
 };
-
-export default fullGame;

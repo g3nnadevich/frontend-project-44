@@ -4,17 +4,19 @@ import game from '../index.js';
 const rules = 'What is the result of the expression?';
 
 const calc = (firstNumber, secondNumber, randomOperator) => {
-  if (randomOperator === '+') {
-    return firstNumber + secondNumber;
-  } if (randomOperator === '-') {
-    return firstNumber - secondNumber;
-  } if (randomOperator === '*') {
-    return firstNumber * secondNumber;
+  switch(randomOperator) {
+    case '+':
+      return firstNumber + secondNumber;
+    case '-':
+      return firstNumber - secondNumber;
+    case '*':
+      return firstNumber * secondNumber;
+    default:
+      return null;
   }
-  return null;
 };
 
-const questionAndAnswer = () => {
+const getQuestionAndAnswer = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
 
@@ -27,8 +29,6 @@ const questionAndAnswer = () => {
   return [question, correctAnswer];
 };
 
-const fullGame = () => {
-  game(rules, questionAndAnswer);
+export default () => {
+  game(rules, getQuestionAndAnswer);
 };
-
-export default fullGame;
